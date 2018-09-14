@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8347B66D2141FD0400F8AA59 /* dict.c in Sources */ = {isa = PBXBuildFile; fileRef = 8347B6542141FD0400F8AA59 /* dict.c */; };
+		8347B66E2141FD0400F8AA59 /* priorityq.c in Sources */ = {isa = PBXBuildFile; fileRef = 8347B6562141FD0400F8AA59 /* priorityq.c */; };
+		8347B66F2141FD0400F8AA59 /* sweep.c in Sources */ = {isa = PBXBuildFile; fileRef = 8347B6582141FD0400F8AA59 /* sweep.c */; };
+		8347B6702141FD0400F8AA59 /* geom.c in Sources */ = {isa = PBXBuildFile; fileRef = 8347B6592141FD0400F8AA59 /* geom.c */; };
+		8347B6712141FD0400F8AA59 /* tess.c in Sources */ = {isa = PBXBuildFile; fileRef = 8347B65B2141FD0400F8AA59 /* tess.c */; };
+		8347B6722141FD0400F8AA59 /* bucketalloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 8347B65F2141FD0400F8AA59 /* bucketalloc.c */; };
+		8347B6732141FD0400F8AA59 /* mesh.c in Sources */ = {isa = PBXBuildFile; fileRef = 8347B6602141FD0400F8AA59 /* mesh.c */; };
+		8347B67A2145C0D400F8AA59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 836EA37821404AE0006ACFBD /* Assets.xcassets */; };
+		8347B67B2145C0FC00F8AA59 /* bucketalloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 8347B65F2141FD0400F8AA59 /* bucketalloc.c */; };
+		8347B67C2145C0FC00F8AA59 /* dict.c in Sources */ = {isa = PBXBuildFile; fileRef = 8347B6542141FD0400F8AA59 /* dict.c */; };
+		8347B67D2145C0FC00F8AA59 /* geom.c in Sources */ = {isa = PBXBuildFile; fileRef = 8347B6592141FD0400F8AA59 /* geom.c */; };
+		8347B67E2145C0FC00F8AA59 /* mesh.c in Sources */ = {isa = PBXBuildFile; fileRef = 8347B6602141FD0400F8AA59 /* mesh.c */; };
+		8347B67F2145C0FC00F8AA59 /* priorityq.c in Sources */ = {isa = PBXBuildFile; fileRef = 8347B6562141FD0400F8AA59 /* priorityq.c */; };
+		8347B6802145C0FC00F8AA59 /* sweep.c in Sources */ = {isa = PBXBuildFile; fileRef = 8347B6582141FD0400F8AA59 /* sweep.c */; };
+		8347B6812145C0FC00F8AA59 /* tess.c in Sources */ = {isa = PBXBuildFile; fileRef = 8347B65B2141FD0400F8AA59 /* tess.c */; };
+		8347B6822145C0FC00F8AA59 /* MBEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 836EA36D21404ADF006ACFBD /* MBEAppDelegate.m */; };
+		8347B6832145C0FC00F8AA59 /* MBERenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 836EA37021404ADF006ACFBD /* MBERenderer.m */; };
+		8347B6842145C0FC00F8AA59 /* MBETextMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 836EA39121404EA8006ACFBD /* MBETextMesh.m */; };
+		8347B6852145C0FC00F8AA59 /* MBETextTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FA53E621459D7C00CE0283 /* MBETextTypes.m */; };
+		8347B6862145C0FC00F8AA59 /* MBEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 836EA37321404ADF006ACFBD /* MBEViewController.m */; };
+		8347B6872145C0FC00F8AA59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 836EA37E21404AE0006ACFBD /* main.m */; };
+		8347B6882145C0FC00F8AA59 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 836EA37521404ADF006ACFBD /* Shaders.metal */; };
+		836EA36E21404ADF006ACFBD /* MBEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 836EA36D21404ADF006ACFBD /* MBEAppDelegate.m */; };
+		836EA37121404ADF006ACFBD /* MBERenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 836EA37021404ADF006ACFBD /* MBERenderer.m */; };
+		836EA37421404ADF006ACFBD /* MBEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 836EA37321404ADF006ACFBD /* MBEViewController.m */; };
+		836EA37621404ADF006ACFBD /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 836EA37521404ADF006ACFBD /* Shaders.metal */; };
+		836EA37921404AE0006ACFBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 836EA37821404AE0006ACFBD /* Assets.xcassets */; };
+		836EA37C21404AE0006ACFBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836EA37A21404AE0006ACFBD /* Main.storyboard */; };
+		836EA37F21404AE0006ACFBD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 836EA37E21404AE0006ACFBD /* main.m */; };
+		836EA39221404EA8006ACFBD /* MBETextMesh.m in Sources */ = {isa = PBXBuildFile; fileRef = 836EA39121404EA8006ACFBD /* MBETextMesh.m */; };
+		83FA53E721459D7C00CE0283 /* MBETextTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FA53E621459D7C00CE0283 /* MBETextTypes.m */; };
+		83FA53F62145BCFB00CE0283 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83FA53F42145BCFB00CE0283 /* Main.storyboard */; };
+		83FA53FB2145BCFC00CE0283 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83FA53F92145BCFC00CE0283 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8347B6522141FD0400F8AA59 /* tesselator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tesselator.h; sourceTree = "<group>"; };
+		8347B6542141FD0400F8AA59 /* dict.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dict.c; sourceTree = "<group>"; };
+		8347B6552141FD0400F8AA59 /* tess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tess.h; sourceTree = "<group>"; };
+		8347B6562141FD0400F8AA59 /* priorityq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = priorityq.c; sourceTree = "<group>"; };
+		8347B6572141FD0400F8AA59 /* bucketalloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bucketalloc.h; sourceTree = "<group>"; };
+		8347B6582141FD0400F8AA59 /* sweep.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sweep.c; sourceTree = "<group>"; };
+		8347B6592141FD0400F8AA59 /* geom.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = geom.c; sourceTree = "<group>"; };
+		8347B65A2141FD0400F8AA59 /* mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mesh.h; sourceTree = "<group>"; };
+		8347B65B2141FD0400F8AA59 /* tess.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tess.c; sourceTree = "<group>"; };
+		8347B65C2141FD0400F8AA59 /* dict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dict.h; sourceTree = "<group>"; };
+		8347B65D2141FD0400F8AA59 /* priorityq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = priorityq.h; sourceTree = "<group>"; };
+		8347B65E2141FD0400F8AA59 /* sweep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sweep.h; sourceTree = "<group>"; };
+		8347B65F2141FD0400F8AA59 /* bucketalloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bucketalloc.c; sourceTree = "<group>"; };
+		8347B6602141FD0400F8AA59 /* mesh.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mesh.c; sourceTree = "<group>"; };
+		8347B6612141FD0400F8AA59 /* geom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geom.h; sourceTree = "<group>"; };
+		836EA36921404ADF006ACFBD /* MetalExtrudedText-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MetalExtrudedText-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		836EA36C21404ADF006ACFBD /* MBEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBEAppDelegate.h; sourceTree = "<group>"; };
+		836EA36D21404ADF006ACFBD /* MBEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBEAppDelegate.m; sourceTree = "<group>"; };
+		836EA36F21404ADF006ACFBD /* MBERenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBERenderer.h; sourceTree = "<group>"; };
+		836EA37021404ADF006ACFBD /* MBERenderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBERenderer.m; sourceTree = "<group>"; };
+		836EA37221404ADF006ACFBD /* MBEViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBEViewController.h; sourceTree = "<group>"; };
+		836EA37321404ADF006ACFBD /* MBEViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBEViewController.m; sourceTree = "<group>"; };
+		836EA37521404ADF006ACFBD /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		836EA37821404AE0006ACFBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		836EA37B21404AE0006ACFBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		836EA37D21404AE0006ACFBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		836EA37E21404AE0006ACFBD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		836EA38021404AE0006ACFBD /* MetalExtrudedText.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MetalExtrudedText.entitlements; sourceTree = "<group>"; };
+		836EA39021404EA8006ACFBD /* MBETextMesh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBETextMesh.h; sourceTree = "<group>"; };
+		836EA39121404EA8006ACFBD /* MBETextMesh.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBETextMesh.m; sourceTree = "<group>"; };
+		83FA53E521459D7C00CE0283 /* MBETextTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBETextTypes.h; sourceTree = "<group>"; };
+		83FA53E621459D7C00CE0283 /* MBETextTypes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBETextTypes.m; sourceTree = "<group>"; };
+		83FA53EC2145BCFA00CE0283 /* MetalExtrudedText-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MetalExtrudedText-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		83FA53F52145BCFB00CE0283 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		83FA53FA2145BCFC00CE0283 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		83FA53FC2145BCFC00CE0283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		836EA36621404ADF006ACFBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83FA53E92145BCFA00CE0283 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8347B64B2141FD0400F8AA59 /* libtess2 */ = {
+			isa = PBXGroup;
+			children = (
+				8347B6512141FD0400F8AA59 /* include */,
+				8347B6532141FD0400F8AA59 /* source */,
+			);
+			path = libtess2;
+			sourceTree = "<group>";
+		};
+		8347B6512141FD0400F8AA59 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				8347B6522141FD0400F8AA59 /* tesselator.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		8347B6532141FD0400F8AA59 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				8347B6572141FD0400F8AA59 /* bucketalloc.h */,
+				8347B65F2141FD0400F8AA59 /* bucketalloc.c */,
+				8347B65C2141FD0400F8AA59 /* dict.h */,
+				8347B6542141FD0400F8AA59 /* dict.c */,
+				8347B6612141FD0400F8AA59 /* geom.h */,
+				8347B6592141FD0400F8AA59 /* geom.c */,
+				8347B65A2141FD0400F8AA59 /* mesh.h */,
+				8347B6602141FD0400F8AA59 /* mesh.c */,
+				8347B65D2141FD0400F8AA59 /* priorityq.h */,
+				8347B6562141FD0400F8AA59 /* priorityq.c */,
+				8347B65E2141FD0400F8AA59 /* sweep.h */,
+				8347B6582141FD0400F8AA59 /* sweep.c */,
+				8347B6552141FD0400F8AA59 /* tess.h */,
+				8347B65B2141FD0400F8AA59 /* tess.c */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		836EA36021404ADF006ACFBD = {
+			isa = PBXGroup;
+			children = (
+				836EA36B21404ADF006ACFBD /* Shared */,
+				83FA54022145BD4100CE0283 /* macOS */,
+				83FA53ED2145BCFA00CE0283 /* iOS */,
+				836EA36A21404ADF006ACFBD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		836EA36A21404ADF006ACFBD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				836EA36921404ADF006ACFBD /* MetalExtrudedText-macOS.app */,
+				83FA53EC2145BCFA00CE0283 /* MetalExtrudedText-iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		836EA36B21404ADF006ACFBD /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				8347B64B2141FD0400F8AA59 /* libtess2 */,
+				836EA36C21404ADF006ACFBD /* MBEAppDelegate.h */,
+				836EA36D21404ADF006ACFBD /* MBEAppDelegate.m */,
+				836EA36F21404ADF006ACFBD /* MBERenderer.h */,
+				836EA37021404ADF006ACFBD /* MBERenderer.m */,
+				836EA39021404EA8006ACFBD /* MBETextMesh.h */,
+				836EA39121404EA8006ACFBD /* MBETextMesh.m */,
+				83FA53E521459D7C00CE0283 /* MBETextTypes.h */,
+				83FA53E621459D7C00CE0283 /* MBETextTypes.m */,
+				836EA37221404ADF006ACFBD /* MBEViewController.h */,
+				836EA37321404ADF006ACFBD /* MBEViewController.m */,
+				836EA37E21404AE0006ACFBD /* main.m */,
+				836EA37521404ADF006ACFBD /* Shaders.metal */,
+				836EA37821404AE0006ACFBD /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		83FA53ED2145BCFA00CE0283 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				83FA53F42145BCFB00CE0283 /* Main.storyboard */,
+				83FA53F92145BCFC00CE0283 /* LaunchScreen.storyboard */,
+				83FA53FC2145BCFC00CE0283 /* Info.plist */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		83FA54022145BD4100CE0283 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				836EA37A21404AE0006ACFBD /* Main.storyboard */,
+				836EA37D21404AE0006ACFBD /* Info.plist */,
+				836EA38021404AE0006ACFBD /* MetalExtrudedText.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		836EA36821404ADF006ACFBD /* MetalExtrudedText-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 836EA38321404AE0006ACFBD /* Build configuration list for PBXNativeTarget "MetalExtrudedText-macOS" */;
+			buildPhases = (
+				836EA36521404ADF006ACFBD /* Sources */,
+				836EA36621404ADF006ACFBD /* Frameworks */,
+				836EA36721404ADF006ACFBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MetalExtrudedText-macOS";
+			productName = MetalExtrudedText;
+			productReference = 836EA36921404ADF006ACFBD /* MetalExtrudedText-macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		83FA53EB2145BCFA00CE0283 /* MetalExtrudedText-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83FA53FF2145BCFC00CE0283 /* Build configuration list for PBXNativeTarget "MetalExtrudedText-iOS" */;
+			buildPhases = (
+				83FA53E82145BCFA00CE0283 /* Sources */,
+				83FA53E92145BCFA00CE0283 /* Frameworks */,
+				83FA53EA2145BCFA00CE0283 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MetalExtrudedText-iOS";
+			productName = "MetalExtrudedText-iOS";
+			productReference = 83FA53EC2145BCFA00CE0283 /* MetalExtrudedText-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		836EA36121404ADF006ACFBD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Metal By Example";
+				TargetAttributes = {
+					836EA36821404ADF006ACFBD = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					83FA53EB2145BCFA00CE0283 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 836EA36421404ADF006ACFBD /* Build configuration list for PBXProject "MetalExtrudedText" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 836EA36021404ADF006ACFBD;
+			productRefGroup = 836EA36A21404ADF006ACFBD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				836EA36821404ADF006ACFBD /* MetalExtrudedText-macOS */,
+				83FA53EB2145BCFA00CE0283 /* MetalExtrudedText-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		836EA36721404ADF006ACFBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				836EA37921404AE0006ACFBD /* Assets.xcassets in Resources */,
+				836EA37C21404AE0006ACFBD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83FA53EA2145BCFA00CE0283 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83FA53FB2145BCFC00CE0283 /* LaunchScreen.storyboard in Resources */,
+				8347B67A2145C0D400F8AA59 /* Assets.xcassets in Resources */,
+				83FA53F62145BCFB00CE0283 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		836EA36521404ADF006ACFBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8347B6712141FD0400F8AA59 /* tess.c in Sources */,
+				8347B6722141FD0400F8AA59 /* bucketalloc.c in Sources */,
+				8347B6702141FD0400F8AA59 /* geom.c in Sources */,
+				83FA53E721459D7C00CE0283 /* MBETextTypes.m in Sources */,
+				8347B66F2141FD0400F8AA59 /* sweep.c in Sources */,
+				8347B6732141FD0400F8AA59 /* mesh.c in Sources */,
+				8347B66E2141FD0400F8AA59 /* priorityq.c in Sources */,
+				836EA37F21404AE0006ACFBD /* main.m in Sources */,
+				836EA37621404ADF006ACFBD /* Shaders.metal in Sources */,
+				836EA39221404EA8006ACFBD /* MBETextMesh.m in Sources */,
+				836EA37121404ADF006ACFBD /* MBERenderer.m in Sources */,
+				8347B66D2141FD0400F8AA59 /* dict.c in Sources */,
+				836EA37421404ADF006ACFBD /* MBEViewController.m in Sources */,
+				836EA36E21404ADF006ACFBD /* MBEAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83FA53E82145BCFA00CE0283 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8347B67B2145C0FC00F8AA59 /* bucketalloc.c in Sources */,
+				8347B67C2145C0FC00F8AA59 /* dict.c in Sources */,
+				8347B67D2145C0FC00F8AA59 /* geom.c in Sources */,
+				8347B67E2145C0FC00F8AA59 /* mesh.c in Sources */,
+				8347B67F2145C0FC00F8AA59 /* priorityq.c in Sources */,
+				8347B6802145C0FC00F8AA59 /* sweep.c in Sources */,
+				8347B6812145C0FC00F8AA59 /* tess.c in Sources */,
+				8347B6822145C0FC00F8AA59 /* MBEAppDelegate.m in Sources */,
+				8347B6832145C0FC00F8AA59 /* MBERenderer.m in Sources */,
+				8347B6842145C0FC00F8AA59 /* MBETextMesh.m in Sources */,
+				8347B6852145C0FC00F8AA59 /* MBETextTypes.m in Sources */,
+				8347B6862145C0FC00F8AA59 /* MBEViewController.m in Sources */,
+				8347B6872145C0FC00F8AA59 /* main.m in Sources */,
+				8347B6882145C0FC00F8AA59 /* Shaders.metal in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		836EA37A21404AE0006ACFBD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				836EA37B21404AE0006ACFBD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		83FA53F42145BCFB00CE0283 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83FA53F52145BCFB00CE0283 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		83FA53F92145BCFC00CE0283 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83FA53FA2145BCFC00CE0283 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		836EA38121404AE0006ACFBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		836EA38221404AE0006ACFBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		836EA38421404AE0006ACFBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = macOS/MetalExtrudedText.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = M4KB9BV65V;
+				INFOPLIST_FILE = "$(SRCROOT)/macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.metalbyexample.MetalExtrudedText;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		836EA38521404AE0006ACFBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = macOS/MetalExtrudedText.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = M4KB9BV65V;
+				INFOPLIST_FILE = "$(SRCROOT)/macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.metalbyexample.MetalExtrudedText;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		83FA54002145BCFC00CE0283 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M4KB9BV65V;
+				INFOPLIST_FILE = "$(SRCROOT)/iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.metalbyexample.MetalExtrudedText-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		83FA54012145BCFC00CE0283 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M4KB9BV65V;
+				INFOPLIST_FILE = "$(SRCROOT)/iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.metalbyexample.MetalExtrudedText-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		836EA36421404ADF006ACFBD /* Build configuration list for PBXProject "MetalExtrudedText" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				836EA38121404AE0006ACFBD /* Debug */,
+				836EA38221404AE0006ACFBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		836EA38321404AE0006ACFBD /* Build configuration list for PBXNativeTarget "MetalExtrudedText-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				836EA38421404AE0006ACFBD /* Debug */,
+				836EA38521404AE0006ACFBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83FA53FF2145BCFC00CE0283 /* Build configuration list for PBXNativeTarget "MetalExtrudedText-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83FA54002145BCFC00CE0283 /* Debug */,
+				83FA54012145BCFC00CE0283 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 836EA36121404ADF006ACFBD /* Project object */;
+}
