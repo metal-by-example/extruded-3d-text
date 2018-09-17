@@ -11,7 +11,8 @@ typedef struct {
 
 static const NSUInteger kMaxBuffersInFlight = 3;
 
-static const size_t kAlignedUniformsSize = (sizeof(Uniforms) & ~0xFF) + 0x100;
+static const size_t kUniformAlignment = 256;
+static const size_t kAlignedUniformsSize = ((sizeof(Uniforms) + kUniformAlignment - 1) / kUniformAlignment) * kUniformAlignment;
 
 @interface MBERenderer ()
 @property (nonatomic, strong) id <MTLDevice> device;
@@ -138,7 +139,7 @@ static const size_t kAlignedUniformsSize = (sizeof(Uniforms) & ~0xFF) + 0x100;
 
     uniforms->modelViewMatrix = matrix_multiply(viewMatrix, modelMatrix);
 
-    //self.rotation += timestep;
+    self.rotation += timestep;
 }
 
 - (void)drawInMTKView:(nonnull MTKView *)view
