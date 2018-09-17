@@ -50,11 +50,11 @@ static inline CGPoint evalQuadCurve(CGPoint a, CGPoint b, CGPoint c, CGFloat t) 
     
     CFRelease(attributedString);
     
-    // Flatten the paths associated with the glyphs so we can more easily tesselate them in the next step
+    // Flatten the paths associated with the glyphs so we can more easily tessellate them in the next step
     [self flattenPathsForGlyphs:glyphs];
     
-    // Tesselate the glyphs into contours and actual mesh geometry
-    [self tesselatePathsForGlyphs:glyphs];
+    // Tessellate the glyphs into contours and actual mesh geometry
+    [self tessellatePathsForGlyphs:glyphs];
     
     // Figure out how much space we need in our vertex and index buffers to accommodate the mesh
     NSUInteger vertexCount = 0, indexCount = 0;
@@ -250,8 +250,8 @@ static inline CGPoint evalQuadCurve(CGPoint a, CGPoint b, CGPoint c, CGFloat t) 
     return flattenedPath;
 }
 
-+ (void)tesselatePathsForGlyphs:(Glyph *)glyphs {
-    // Create a new libtess tesselator, requesting constrained Delaunay triangulation
++ (void)tessellatePathsForGlyphs:(Glyph *)glyphs {
+    // Create a new libtess tessellator, requesting constrained Delaunay triangulation
     TESStesselator *tess = tessNewTess(NULL);
     tessSetOption(tess, TESS_CONSTRAINED_DELAUNAY_TRIANGULATION, 1);
     
@@ -259,16 +259,16 @@ static inline CGPoint evalQuadCurve(CGPoint a, CGPoint b, CGPoint c, CGFloat t) 
     
     Glyph *glyph = glyphs;
     while (glyph) {
-        // Accumulate the contours of the flattened path into the tesselator so it can compute the CDT
-        PathContour *contours = [self tesselatePath:glyph->path usingTesselator:tess];
+        // Accumulate the contours of the flattened path into the tessellator so it can compute the CDT
+        PathContour *contours = [self tessellatePath:glyph->path usingTessellator:tess];
 
-        // Do the actual tesselation work
+        // Do the actual tessellation work
         int result = tessTesselate(tess, TESS_WINDING_ODD, TESS_POLYGONS, polygonIndexCount, VERT_COMPONENT_COUNT, NULL);
         if (!result) {
-            NSLog(@"Unable to tesselate path");
+            NSLog(@"Unable to tessellate path");
         }
         
-        // Retrieve the tesselated mesh from the tesselator and copy the contour list and geometry to the current glyph
+        // Retrieve the tessellated mesh from the tessellator and copy the contour list and geometry to the current glyph
         int vertexCount = tessGetVertexCount(tess);
         const TESSreal *vertices = tessGetVertices(tess);
         int indexCount = tessGetElementCount(tess) * polygonIndexCount;
@@ -284,11 +284,11 @@ static inline CGPoint evalQuadCurve(CGPoint a, CGPoint b, CGPoint c, CGFloat t) 
     tessDeleteTess(tess);
 }
 
-+ (PathContour *)tesselatePath:(CGPathRef)path usingTesselator:(TESStesselator *)tesselator {
++ (PathContour *)tessellatePath:(CGPathRef)path usingTessellator:(TESStesselator *)tessellator {
     __block PathContour *contour = PathContourCreate();
     PathContour *contours = contour;
     // Iterate the line segments in the flattened path, accumulating each subpath as a contour,
-    // then pass closed contours to the tesselator
+    // then pass closed contours to the tessellator
     CGPathApplyWithBlock(path, ^(const CGPathElement *element){
         switch (element->type) {
             case kCGPathElementMoveToPoint: {
@@ -306,12 +306,12 @@ static inline CGPoint evalQuadCurve(CGPoint a, CGPoint b, CGPoint c, CGFloat t) 
             }
             case kCGPathElementAddCurveToPoint:
             case kCGPathElementAddQuadCurveToPoint:
-                assert(!"Tesselator does not expect curve segments; flatten path first");
+                assert(!"Tessellator does not expect curve segments; flatten path first");
                 break;
             case kCGPathElementCloseSubpath: {
                 PathVertex *vertices = PathContourGetVertices(contour);
                 int vertexCount = PathContourGetVertexCount(contour);
-                tessAddContour(tesselator, 2, vertices, sizeof(PathVertex), vertexCount);
+                tessAddContour(tessellator, 2, vertices, sizeof(PathVertex), vertexCount);
                 contour->next = PathContourCreate();
                 contour = contour->next;
                 break;
@@ -330,7 +330,7 @@ static inline CGPoint evalQuadCurve(CGPoint a, CGPoint b, CGPoint c, CGFloat t) 
     
     Glyph *glyph = glyphs;
     while (glyph) {
-        // Space for front- and back-facing tesselated faces
+        // Space for front- and back-facing tessellated faces
         *vertexBufferCount += 2 * glyph->vertexCount;
         *indexBufferCount += 2 * glyph->indexCount;
         
@@ -353,7 +353,7 @@ static inline CGPoint evalQuadCurve(CGPoint a, CGPoint b, CGPoint c, CGFloat t) 
 {
     MDLMeshBufferMap *map = [vertexBuffer map];
     
-    // For each glyph, write two copies of the tesselated mesh into the vertex buffer,
+    // For each glyph, write two copies of the tessellated mesh into the vertex buffer,
     // one after the other. The first copy is for front-facing faces, and the second
     // copy is for rear-facing faces
     Glyph *glyph = glyphs;
